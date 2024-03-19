@@ -106,7 +106,7 @@ logger = logging.getLogger('mlProjectLogger')
     ```
 *** B. Common functions  ***
 
-    create common functions to read yaml file, read/write json file...... so on `src/mlProject/utils/common.py`
+create common functions to read yaml file, read/write json file...... so on `src/mlProject/utils/common.py`
 
     ```
         @ensure_annotations
