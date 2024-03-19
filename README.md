@@ -1,7 +1,8 @@
 ### ML Project Template 
 
 #### 1. Project Files 
-`---`<hr>
+`---------------------`
+
 ```
 project_name = "mlProject"
 
