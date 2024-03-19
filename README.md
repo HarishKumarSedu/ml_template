@@ -90,7 +90,7 @@ logging.basicConfig(
 
 logger = logging.getLogger('mlProjectLogger')
 ```
-#### 3. Create Components 
+#### 3. Data Ingestion
 ***
 
 *** A. yaml file Constants  ***
@@ -272,4 +272,20 @@ class DataIngestion:
         else:
             logger.info(f' data {filename} dose not exists in  {Path(self.config.local_data_file)}')
 ```
+*** E. Data Ingestion Pipeline ***
 
+```
+STAGE_NAME = 'Data Ingestion'
+
+class DataIngestionTrainingPipeline:
+
+    def __init__(self) -> None:
+        pass
+
+    def main(self):
+        config = ConfigurationManager()
+        data_ingestion_config = config.get_data_ingestion_config()
+        data_ingestion = DataIngestion(config=data_ingestion_config)
+        data_ingestion.download_file()
+        data_ingestion.extract_zip_file()
+```
