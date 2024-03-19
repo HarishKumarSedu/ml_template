@@ -93,7 +93,7 @@ logger = logging.getLogger('mlProjectLogger')
 #### 3. Create Components 
 ***
 
-    * yaml file Constants 
+    * yaml file Constants *
 
     create the constants for the yaml file paths in the project path -> `src/mlProject/Constants/__init__.py`
 
