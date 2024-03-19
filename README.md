@@ -65,3 +65,28 @@ setuptools.setup(
 create the seperate version file under the config and enter the version data,
 Update the requirements.txt file with packages if you enter `-e` at the end of the requirements .... setuptools automatically install all the packages and setup the python package in `src` folder. 
 
+#### 3. Add The logger function
+`-------------------------------`
+
+add the logger function  `src/mlProject/__init__.py` 
+
+```
+# setup the loggins string format 
+logging_str = "[%(asctime)s : %(levelname)s : %(module)s : %(message)s]"
+
+log_dir = "logs"
+log_filepath = os.path.join(log_dir,"running_logs.log")
+os.makedirs(log_dir, exist_ok=True)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format=logging_str,
+    handlers=[
+        logging.FileHandler(log_filepath),
+        logging.StreamHandler(sys.stdout)
+
+    ]
+)
+
+logger = logging.getLogger('mlProjectLogger')
+```
