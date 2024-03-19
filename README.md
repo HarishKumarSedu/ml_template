@@ -90,3 +90,17 @@ logging.basicConfig(
 
 logger = logging.getLogger('mlProjectLogger')
 ```
+#### 3. Create Components 
+***
+
+    * yaml file Constants 
+
+    create the constants for the yaml file paths in the project path -> `src/mlProject/Constants/__init__.py`
+
+    ```
+    from pathlib import Path
+
+    CONFIG_PATH = Path('config/config.yaml')
+    SCHEMA_PATH = Path('schema.yaml')
+    PARAMS_PATH = Path('paramas.yaml')
+    ```
