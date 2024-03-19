@@ -1,6 +1,7 @@
-### ML Project Template 
+### ML Project Template
 
-#### 1. Project Files 
+#### 1. Project Files
+
 `---------------------`
 
 ```
@@ -32,8 +33,11 @@ list_of_files = [
     "test.py"
 ]
 ```
-#### 2. Setup the setuptools for the python package 
+
+#### 2. Setup the setuptools for the python package
+
 `--------------------------------------------------`
+
 ```
 REPO_NAME = 'ml_template'
 AUTHOR_USER_NAME = 'HarishKumarSedu'
@@ -57,4 +61,7 @@ setuptools.setup(
     packages=setuptools.find_packages(where="src")
 )
 ```
+
 create the seperate version file under the config and enter the version data,
+Update the requirements.txt file with packages if you enter `-e` at the end of the requirements .... setuptools automatically install all the packages and setup the python package in `src` folder. 
+
